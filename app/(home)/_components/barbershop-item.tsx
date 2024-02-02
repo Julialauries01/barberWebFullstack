@@ -12,7 +12,7 @@ interface BarbershoItemProps{
    barbershop: Barbershop;
 }
 
-const BarbershoItem = ({ barbershop }: BarbershoItemProps) => {
+const BarbershopItem = ({ barbershop }: BarbershoItemProps) => {
    const router = useRouter();
 
    const handleBookingClick = () => {
@@ -57,4 +57,4 @@ router.push(`/barbershops/${barbershop.id}`)
     );
 }
  
-export default BarbershoItem;
+export default BarbershopItem;
