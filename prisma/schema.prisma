@@ -50,7 +50,6 @@ model Booking {
   date         DateTime
   barbershopID String
   barbershop   Barbershop @relation(fields: [barbershopID], references: [id])
-  status       String
 }
 
 model Account {
