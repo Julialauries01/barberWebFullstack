@@ -1,8 +1,10 @@
 "use server"
 
+import { db } from "@/app/lib/prisma";
+
 interface SaveBookingParams{
    barbershopId: string;
-   serviceId: string;
+   serviceID: string;
    userId: string;
    date: Date;
 }
@@ -10,10 +12,11 @@ interface SaveBookingParams{
 export const saveBooking = async (params: SaveBookingParams) => {
    await db.booking.create({
       data: {
-         serviceId: params.serviceId,
+         serviceID: params.serviceID,
          userId: params.userId,
-         date: params.date
-      }
-   })
+         date: params.date,
+         barbershopID: params.barbershopId,
+      },
+   });
 
-}
+};
