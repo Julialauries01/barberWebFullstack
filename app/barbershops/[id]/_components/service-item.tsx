@@ -138,7 +138,7 @@ const ServiceItem = ({service, barbershop, isAuthenticated}: ServiceItemProps) =
 
    return (
        <Card>
-      <CardContent className="p-3">
+      <CardContent className="p-3 overflow-hidden">
 <div className="flex gap-4 items-center w-full">
    <div className="relative h-[110px] w-[110px]">
    <Image className="rounded-lg" src={service.imageUrl} fill style={{objectFit: 'contain'}} alt={service.name}/>
@@ -173,7 +173,7 @@ const ServiceItem = ({service, barbershop, isAuthenticated}: ServiceItemProps) =
     mode="single"
     selected={date}
     onSelect={handleDateClick}
-    className="border-t border-solid border-secondary"
+    className="border-t overflow-x-auto [%::-webkit-scrollbar]:hidden border-solid border-secondary"
     locale={ptBR}
     fromDate={new Date()}
     
