@@ -162,7 +162,7 @@ const ServiceItem = ({service, barbershop, isAuthenticated}: ServiceItemProps) =
       </SheetTrigger>
 
    <SheetContent className="p-0">
-      <SheetHeader className="text-left px-5 py-6 border-solid border-secondary">
+      <SheetHeader className="text-left px-5 py-4 border-solid border-secondary">
          <SheetTitle>
             Fazer Reserva
          </SheetTitle>
@@ -206,7 +206,7 @@ const ServiceItem = ({service, barbershop, isAuthenticated}: ServiceItemProps) =
 
 </div>
    {date && (
-      <div className= " flex gap-3 overflow-x-auto py-6 px-5 border-t border-solid border-secondary [%::-webkit-scrollbar]:hidden">
+      <div className= " flex gap-3 overflow-x-auto py-3 px-5 border-t border-solid border-secondary [%::-webkit-scrollbar]:hidden">
       {timeList.map((time) => (
          <Button
          onClick={() => handleHourClick(time)}
@@ -256,7 +256,7 @@ const ServiceItem = ({service, barbershop, isAuthenticated}: ServiceItemProps) =
    </Card>
 </div>
 
-<SheetFooter className="px-5 mt-2">
+<SheetFooter className="px-5">
    <Button onClick={handleBookingSubmit} disabled={!hour || !date || submitIsLoading}>
 {submitIsLoading && 
      <Loader2 className="mr-2 h-4 w-4 animate-spin"/>
