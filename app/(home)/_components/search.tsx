@@ -35,7 +35,6 @@ const Search = ({ defaultValues }: SearchProps) => {
   const handleSubmit = (data: z.infer<typeof formSchema>) => {
     router.push(`/barbershops?search=${data.search}`);
   };
-
   return (
     <div className="flex items-center gap-2">
       <Form {...form}>
