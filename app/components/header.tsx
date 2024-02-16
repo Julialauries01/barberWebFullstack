@@ -20,11 +20,12 @@ const Header = () => {
    const handleLoginClick = () => signIn ("google") 
 
    return ( 
-      <Card>
+<header>
+<Card>
          <CardContent className="p-5 justify-between items-center flex flex-row">
 
 <Link href="/">
-<Image src="/logo.png" alt="FSW Barber" height={22} width={120}/>
+<Image src="/logo.png" alt="FSW Barber" />
 
 </Link>
         <Sheet>
@@ -41,6 +42,7 @@ const Header = () => {
             </CardContent>
 
       </Card>
+</header>
     );
 }
  
