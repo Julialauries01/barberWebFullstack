@@ -138,7 +138,7 @@ const ServiceItem = ({service, barbershop, isAuthenticated}: ServiceItemProps) =
 
    return (
        <Card>
-      <CardContent className="p-3 overflow-hidden">
+      <CardContent className="p-3 overflow-y-auto [%::-webkit-scrollbar]:hidden ">
 <div className="flex gap-4 items-center w-full">
    <div className="relative h-[110px] w-[110px]">
    <Image className="rounded-lg" src={service.imageUrl} fill style={{objectFit: 'contain'}} alt={service.name}/>
@@ -173,7 +173,7 @@ const ServiceItem = ({service, barbershop, isAuthenticated}: ServiceItemProps) =
     mode="single"
     selected={date}
     onSelect={handleDateClick}
-    className="border-t overflow-x-auto [%::-webkit-scrollbar]:hidden border-solid border-secondary"
+    className="border-t border-solid border-secondary"
     locale={ptBR}
     fromDate={new Date()}
     
@@ -190,12 +190,12 @@ const ServiceItem = ({service, barbershop, isAuthenticated}: ServiceItemProps) =
          width: "100%",
       },
       nav_button_previous: {
-         width: "32px",
-         height: "32px"
+         width: "10px",
+         height: "10px"
       },
       nav_button_next: {
-         width: "32px",
-         height: "32px",
+         width: "10px",
+         height: "10px",
       },
       caption: {
          textTransform: "capitalize",
