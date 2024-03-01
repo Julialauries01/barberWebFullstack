@@ -20,7 +20,7 @@ router.push(`/barbershops/${barbershop.id}`)
    }
 
    return ( 
-      <Card className="min-w-full max-w-full rounded-2xl">
+      <Card className="min-w-full max-w-full  rounded-2xl">
 
       <CardContent className="px-1 py-0 pt-1">
         <div className="w-full h-[159px] relative">
@@ -43,10 +43,13 @@ router.push(`/barbershops/${barbershop.id}`)
          className="h-[159p] rounded-2xl"
          />
 </div>
- <div className="px-2 pb-3">
- <h2 className="font-bold mt-2 overflow-hidden text-ellipsis text-nowrap">{barbershop.name}
-         </h2>
-         <p className="text-sm text-gray-400 overflow-hidden text-ellipsis text-nowrap">{barbershop.address}</p>
+ <div className="px-2 pb-3 overflow-hidden text-ellipsis text-nowrap">
+ <h2 className="font-bold mt-2 overflow-hidden text-ellipsis text-nowrap">
+    {barbershop.name.length > 13 ? `${barbershop.name.substring(0, 13)}...` : barbershop.name}
+  </h2>
+  <p className="text-sm text-gray-400 overflow-hidden text-ellipsis text-nowrap">
+    {barbershop.address.length > 15 ? `${barbershop.address.substring(0, 15)}...` : barbershop.address}
+  </p>
          <Button className="w-full mt-3" variant="secondary" onClick={handleBookingClick}>
          Reservar
          </Button>
